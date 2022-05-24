@@ -1,0 +1,43 @@
+@import '../../styles/constants';
+
+.navbar-container {
+    background-color: $navbar_color;
+}
+
+.navbar {
+    width: $width;
+    max-width: $max-width;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    
+    &__left a {
+        display: flex;
+        img {
+            height: 60px;
+            width: 60px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        color: #585E69;
+
+        a {
+            transition: all .1s linear;
+            &:hover {
+                color: #adadad;
+            }
+
+            &.active_link {
+                color: #fff;
+            }
+        }
+
+    }
+}

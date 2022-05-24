@@ -1,0 +1,49 @@
+.mrp-card {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    
+    &__left {
+        display: flex;
+        flex: 1;
+        background-color: springgreen;
+    }
+    
+    &__right {
+        flex: 2;
+        background-color: steelblue;
+        display: grid;
+        grid-template-areas: 
+        "camera sol"
+        "rover-name earth-date";
+        
+        gap: 1rem;
+        padding: 2rem;
+        
+        grid-auto-columns: 1fr;
+        
+        div {
+            background-color: #fefefe75;
+            border-radius: 5px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__camera {
+            grid-area: camera;
+        }
+        &__sol {
+            grid-area: sol;
+        }
+        &__rover-name {
+            grid-area: rover-name;
+        }
+        &__earth-date {
+            grid-area: earth-date;
+        }
+    }
+}
