@@ -3,17 +3,22 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+    height: 250px;
+    background-color: #7c8799;  //#1e3343
+    cursor: pointer;
     
     &__left {
         display: flex;
         flex: 1;
-        background-color: springgreen;
+
+        img {
+            object-fit: cover;
+        }
     }
     
     &__right {
         flex: 2;
-        background-color: steelblue;
+        // background-color: steelblue;
         display: grid;
         grid-template-areas: 
         "camera sol"
@@ -25,7 +30,7 @@
         grid-auto-columns: 1fr;
         
         div {
-            background-color: #fefefe75;
+            color: #fff;
             border-radius: 5px;
             padding: 10px;
             display: flex;
@@ -44,6 +49,15 @@
         }
         &__earth-date {
             grid-area: earth-date;
+        }
+
+        &__key {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+        &__value {
+            font-weight: 400;
+            text-align: center;
         }
     }
 }

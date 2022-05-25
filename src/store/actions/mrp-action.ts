@@ -3,9 +3,9 @@ import { Dispatch } from "redux"
 import { EMrpActionTypes, TMrpAction } from "../types/mrp-types"
 
 
-const URL = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${process.env.REACT_APP_MRP_API_KEY}`
 
-export const fetchMrp = () => async (dispatch: Dispatch<TMrpAction>) => {
+export const fetchMrp = (query: string) => async (dispatch: Dispatch<TMrpAction>) => {
+    const URL = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?${query}&api_key=${process.env.REACT_APP_MRP_API_KEY}`
     try {
         dispatch({ type: EMrpActionTypes.FETCH_MRP })
         const res = await axios.get(URL)

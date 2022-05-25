@@ -1,0 +1,36 @@
+.select-field {
+    position: relative;
+    cursor: pointer;
+
+    &__selected-option {
+        position: relative;
+        input {
+            cursor: pointer;
+            padding-right: 30px !important;
+        }
+
+        svg {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+        }
+
+    }
+
+    &__options {
+        position: absolute;
+        background: indianred;
+        border: 1px solid;
+        width: inherit;
+        top: 33px;
+
+        li {
+            padding: 5px 10px;
+            transition: all .1s linear;
+            &:hover {
+                background-color: khaki;
+            }
+        }
+    }
+}

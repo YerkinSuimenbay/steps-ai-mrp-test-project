@@ -1,0 +1,65 @@
+.mrp-modal {
+    display: grid;
+    grid-template-columns: 600px 250px;
+    column-gap: 2rem;
+
+    &__left {
+        position: relative;
+        display: flex;
+        border-radius: 5px;
+        overflow: hidden;
+        justify-content: center;
+
+        img {
+            height: 500px;
+            width: 600px;
+            object-fit: contain;
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: whitesmoke;
+            font-size: 40px;
+            border-radius: 5px;
+            
+            &:hover {
+                background-color: rgb(223, 222, 222);                
+            }
+        }
+
+        &__arrow-left {
+            left: 5px;
+        }
+        &__arrow-right {
+            right: 5px;
+        }
+
+    }
+
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+
+        &__info-section {
+            flex: 1;
+            display: grid;
+            row-gap: 1rem;
+            align-content: flex-start;
+
+            h3 {
+                font-weight: 600;
+                text-align: center;
+                text-decoration: underline;
+                margin-bottom: 5px;
+            }
+        }
+
+        &__counter {
+            text-align: center;
+            
+        }
+    }
+}

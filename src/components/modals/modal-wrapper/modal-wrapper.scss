@@ -1,0 +1,41 @@
+.modal-container {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.7);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    max-width: 90%;
+    max-height: 90%;
+    min-width: 400px;
+    min-height: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px;
+    position: relative;
+    
+    &__close-button {
+        position: absolute;
+        right: 7px;
+        top: 7px;
+        background-color: transparent;
+        padding: 5px;
+        border-radius: 50%;
+
+        svg {
+            font-size: 20px
+        }
+
+        &:hover {
+            background-color: rgb(236, 126, 83);
+        }
+    }
+}

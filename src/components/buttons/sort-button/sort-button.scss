@@ -1,0 +1,16 @@
+
+.sort-button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    // border: 1px solid #191F28;
+    
+    &:not(.active):hover {
+        background-color: #7c8799;
+        color: #fff;
+    }
+    
+    &.active {
+        background-color: #191F28;
+        color: #fff;
+    }
+}
